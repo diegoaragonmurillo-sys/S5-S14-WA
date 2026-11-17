@@ -11,7 +11,10 @@ export default function Home() {
           name="description"
           content="Portal oficial de estrategias de Street Fighter 6. Domina el sistema Drive, revisa frame data, tier lists y noticias del World Tour."
         />
-        <meta name="keywords" content="Street Fighter 6, SF6, Drive Impact, combos, frame data, Next.js SEO" />
+        <meta
+          name="keywords"
+          content="Street Fighter 6, SF6, Drive Impact, combos, frame data, Next.js SEO"
+        />
         {/* Open Graph / Redes Sociales */}
         <meta property="og:title" content="Street Fighter 6 Battle Hub - Domina las Calles" />
         <meta
@@ -20,6 +23,11 @@ export default function Home() {
         />
         <meta property="og:image" content="/images/seo-image.png" />
         <meta property="og:type" content="website" />
+        {/* Verificación Google Search Console */}
+        <meta
+          name="google-site-verification"
+          content="i4coKtqW4Uq6r13-5UXcwV6Np7PN_L9WBTuwvuzApIA"
+        />
       </Head>
 
       <section className="sf6-hero">
