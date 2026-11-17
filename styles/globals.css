@@ -1,42 +1,199 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
+body {
+  background-color: #0b0b10;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(255, 0, 127, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.15) 0%, transparent 40%);
+  color: #f4f4f8;
+  min-height: 100vh;
+}
+
+/* Navbar estilo Battle Hub */
+.sf6-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: rgba(15, 15, 22, 0.95);
+  border-bottom: 3px solid #ff007f;
+  box-shadow: 0 4px 20px rgba(255, 0, 127, 0.3);
+}
+
+.sf6-logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff007f, #fcee09, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sf6-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.sf6-links a {
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid transparent;
+  transform: skewX(-12deg);
+  transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.sf6-links a:hover {
+  background: #00f0ff;
+  color: #0b0b10;
+  box-shadow: 4px 4px 0px #ff007f;
+}
+
+/* Contenedor Principal */
+.sf6-container {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Banner */
+.sf6-hero {
+  background: linear-gradient(135deg, #161622 0%, #1e1226 100%);
+  border-left: 6px solid #fcee09;
+  border-right: 6px solid #00f0ff;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.sf6-badge {
+  display: inline-block;
+  background: #ff007f;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  transform: skewX(-12deg);
+  margin-bottom: 0.8rem;
+}
+
+.sf6-title {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0px #ff007f;
+}
+
+.sf6-subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 750px;
+}
+
+/* Drive Gauge Bar decorativa */
+.drive-gauge {
+  display: flex;
+  gap: 6px;
+  margin: 1.5rem 0;
+}
+
+.drive-bar {
+  height: 10px;
+  flex: 1;
+  background: linear-gradient(90deg, #00f0ff, #00ff88);
+  transform: skewX(-20deg);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+/* Grid y Tarjetas */
+.sf6-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sf6-card {
+  background: #14141f;
+  border: 1px solid #2a2a3d;
+  border-top: 4px solid #00f0ff;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sf6-card:hover {
+  transform: translateY(-5px);
+  border-top-color: #ff007f;
+  box-shadow: 0 8px 25px rgba(255, 0, 127, 0.25);
+}
+
+.sf6-card h3 {
+  color: #fcee09;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+.sf6-card p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+/* Botón estilo SF6 */
+.sf6-btn {
+  display: inline-block;
+  background: #fcee09;
+  color: #0b0b10;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  transform: skewX(-12deg);
+  box-shadow: 4px 4px 0px #ff007f;
+  transition: all 0.15s ease;
+}
+
+.sf6-btn:hover {
+  background: #00f0ff;
+  box-shadow: 4px 4px 0px #fcee09;
+}
+
+/* Formulario Contacto */
+.sf6-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  background: #14141f;
+  padding: 2rem;
+  border-left: 4px solid #ff007f;
+}
+
+.sf6-input {
+  width: 100%;
+  padding: 0.8rem;
+  background: #0b0b10;
+  border: 1px solid #334155;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.sf6-input:focus {
+  outline: none;
+  border-color: #00f0ff;
 }
